@@ -1,0 +1,113 @@
+{
+    "info": {
+        "_postman_id": "69d140c0-a843-45ea-afde-8998195f57ae",
+        "name": "Modash",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get users",
+            "request": {
+                "method": "GET",
+                "header": []
+            },
+            "response": [
+                {
+                    "name": "Example",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"filter\": {\n        \"influencer\": {\n            \"interests\": null,\n            \"engagementRate\": null,\n            \"gender\": null,\n            \"language\": null,\n            \"location\": null,\n            \"relevance\": [\n                \"@abhii_shekk\"\n            ],\n            \"hasYoutube\": null,\n            \"followers\": null,\n            \"identifier\": null\n        },\n        \"audience\": {\n            \"interests\": null,\n            \"age\": null,\n            \"gender\": null,\n            \"language\": null,\n            \"location\": null\n        }\n    },\n    \"sort\": {\n        \"direction\": \"desc\",\n        \"field\": \"followers\"\n    },\n    \"network\": \"instagram\",\n    \"page\": 0\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://sourcing.ovonts.com/api/get_instagram_username_modash",
+                            "protocol": "https",
+                            "host": [
+                                "sourcing",
+                                "ovonts",
+                                "com"
+                            ],
+                            "path": [
+                                "api",
+                                "get_instagram_username_modash"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": null,
+                    "header": null,
+                    "cookie": [],
+                    "body": null
+                }
+            ]
+        },
+        {
+            "name": "Auto-suggestion",
+            "request": {
+                "method": "GET",
+                "header": []
+            },
+            "response": [
+                {
+                    "name": "Example",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"originalEvent\": {\n        \"isTrusted\": true\n    },\n    \"query\": \"abhii_shekk\",\n    \"search\": \"abhii_shekk\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://sourcing.ovonts.com/api/people_modash_instagram_user_suggestions",
+                            "protocol": "https",
+                            "host": [
+                                "sourcing",
+                                "ovonts",
+                                "com"
+                            ],
+                            "path": [
+                                "api",
+                                "people_modash_instagram_user_suggestions"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": null,
+                    "header": null,
+                    "cookie": [],
+                    "body": "{\n  \"StatusCode\": 200,\n  \"Msg\": \"API ended successfully!\",\n  \"Body\": {\n    \"error\": false,\n    \"users\": [\n      {\n        \"userId\": \"474851648\",\n        \"username\": \"abhii_shekk\",\n        \"fullname\": \"Abhishek Yadav\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDb05bk9EAgW7oQoJCzCEnmGFTMHW8xgM%2BnV4AVDvmXF%2FA1SRGtds3nC2sNzoIOp8Aw79h63kZyiNXp6wyxo84tyWwq5%2BhsabX0Nc9aXCBbcsw%3D%3D\",\n        \"followers\": 714799,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"7292533181\",\n        \"username\": \"_abhishekydav\",\n        \"fullname\": \"abhii_shekk🕊🇮🇳\",\n        \"picture\": \"https://imgigp.modash.io/v2?c%2BZ6gMi8pzyyj3IdIuQSsDBpwchEsdg%2FtvYkoZ9FuoSksebKiT33KgD4wwHFlDXbij9nQHSLYfytWybYF1fTBH05kyE6goyyUtC9vrl%2F1VUD8ZSRjE1%2BLhe95CepXQP5g%2Bxyy0iVudXYli5ANlF4vA%3D%3D\",\n        \"followers\": 1433,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"12095036854\",\n        \"username\": \"abhii_shekk_1144\",\n        \"fullname\": \"Abhishek Kr\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDb05bk9EAgW7oQoJCzCEnmGDj00mqgZ8GcN0yOQKSZSw%2FXGLl8zjp6QLPD%2FELAxDcJMcjydYbY1wcOr%2B6DvBDDgWwq5%2BhsabX0Nc9aXCBbcsw%3D%3D\",\n        \"followers\": 6511,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"43880513037\",\n        \"username\": \"abhii_shekk_ydv\",\n        \"fullname\": \"❤️ਅਭੀ❤️\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDaDVMq5CUHy%2BkcsdYgF20nD69LfejtAv0qpEPrL86KEigR74zEDSh5e9CggWKaMxMiOEUdFc0H0iy71wC5spKAjWwq5%2BhsabX0Nc9aXCBbcsw%3D%3D\",\n        \"followers\": 4719,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"3268735341\",\n        \"username\": \"abhii_shekk._\",\n        \"fullname\": \"Abhishek Rai\",\n        \"picture\": \"https://imgigp.modash.io/v2?c%2BZ6gMi8pzyyj3IdIuQSsDBpwchEsdg%2FtvYkoZ9FuoTYBe9bh9axJl5f35b5f33J%2F8xU885DaKlex8kLp%2BZqNtb2xaYiE9io7tFHG6jwhjcoTwxP51R%2FIxzjVmKykU4d\",\n        \"followers\": 4576,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"31823039393\",\n        \"username\": \"abhii_shekk29\",\n        \"fullname\": \"A💞\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY9ylLT5c6L8M5YYtkm82Y2ToWRdEN3aS%2Fz8LKIzKl9wdG3w0gULRsi4sZAu5ka2PyR5CLG3jharwKsSmX4gH1nvJMDlcbqlLqo%2BXorbqg95g%3D%3D\",\n        \"followers\": 2865,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"4633849760\",\n        \"username\": \"abhii_shekk_yadavv\",\n        \"fullname\": \"🌠Abhii🚬shekk🌠\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY9ylLT5c6L8M5YYtkm82Y2oM9VDhdeS%2BQ%2FOCWetidZ9csRDTsour%2B9VXwc4En90%2FoLvDOnSacI4Z0BHoSUQcnb1BoSz1XW5MCZU6H%2BF%2BG0dg%3D%3D\",\n        \"followers\": 2342,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"26252726587\",\n        \"username\": \"abhii_shekk08\",\n        \"fullname\": \"𝐀 𝐁 𝐇 𝐈 𝐒 𝐇 𝐄 𝐊  🇮🇳\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY9ylLT5c6L8M5YYtkm82Y2%2FYQuLyzPc99%2BSUh%2Fta9qC8AIKZmYqCawujb59xp9C1HyXnTCq38Miw0PnP4wfLk9xyIm79XFi3gCsXH20jOesA%3D%3D\",\n        \"followers\": 2218,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"1552968241\",\n        \"username\": \"abhii_shekkkk\",\n        \"fullname\": \"Abhishek Singh\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY9ylLT5c6L8M5YYtkm82Y2jx1zc6UaW3Ms5Nv0N%2B5O6nSiDzroiSwNHqwx%2BJ7UhlSnl4WHYPwaPeUz1sE8hOrMBX2SQshLa1xIh0dY5HM%2FKw%3D%3D\",\n        \"followers\": 2100,\n        \"isVerified\": false\n      },\n      {\n        \"userId\": \"5738393081\",\n        \"username\": \"abhii_shekk_official\",\n        \"fullname\": \"Abhi\",\n        \"picture\": \"https://imgigp.modash.io/v2?mb0KwpL92uYofJiSjDn1%2F6peL1lBwv3s%2BUvShHERlDY9ylLT5c6L8M5YYtkm82Y2ZjheOOjLFreKnYfDilKWpKUi7pWpiZpUMTRszZ2Oy6hz7hlchHeYGsw64Y3IDzORoj4Ppd99IhvcS8sDGYI5iQ%3D%3D\",\n        \"followers\": 1824,\n        \"isVerified\": false\n      }\n    ]\n  }\n}"
+                }
+            ]
+        },
+        {
+            "name": "Get user stats",
+            "request": {
+                "method": "GET",
+                "header": []
+            },
+            "response": [
+                {
+                    "name": "Example",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": []
+                    },
+                    "_postman_previewlanguage": null,
+                    "header": null,
+                    "cookie": [],
+                    "body": null
+                }
+            ]
+        }
+    ]
+}
