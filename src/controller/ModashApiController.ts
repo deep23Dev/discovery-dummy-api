@@ -38,7 +38,6 @@ ModashApiController.getInfluencer = async (req: Request, res: Response) => {
 ModashApiController.getInfluencerReport = async (req: Request, res: Response) => {
     try {
         let query: any = req.query;
-        console.log(typeof (req.params.userId));
         const influencer_Data: any = await ModashApiService.getInfluencerReport(query.category, query.userId);
         return res.status(200).send({ sucess: true, influencer_Data });
     } catch (error) {

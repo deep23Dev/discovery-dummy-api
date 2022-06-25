@@ -61,7 +61,7 @@ ModashApiHelper.getInfluencers =async (category: string, data: any) => {
     }
 }
 
-ModashApiHelper.getInfluencerReport =async (category: string, userId: any) => {
+ModashApiHelper.getInfluencerReport =async (category: string, userId: string) => {
     try {
         const url = `${modash_api}/${category}/profile/${userId}/report`;
     
