@@ -44,19 +44,37 @@ ModashApiHelper.getSuggestion = async (category: string, search: string) => {
     }
 }
 
-// ModashApiHelper.getInfluencersWithSearch =async (category: string, data: object) => {
-//     try {
-//         const url = `${modash_api}/${category}/search`
+ModashApiHelper.getInfluencers =async (category: string, data: any) => {
+    try {
+        const url = `${modash_api}/${category}/search`;
     
-//         const suggested_Data: any = await axios.get(url, {
-//             headers: {
-//                 'content-type': 'application/json',
-//                 'Authorization': `bearer ${modash_api_key}`
-//             }
-//         })
+        const influencers_Data: any = await axios.post(url, data, {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${modash_api_key}`
+            }
+        })
     
-//         return suggested_Data.data;
-//     } catch (error) {
-//         throw new DatabaseError(`Can't Add User: ${error}`)
-//     }
-// }
+        return influencers_Data.data;
+    } catch (error) {
+        throw new DatabaseError(`Can't Add User: ${error}`)
+    }
+}
+
+ModashApiHelper.getInfluencerReport =async (category: string, userId: any) => {
+    try {
+        const url = `${modash_api}/${category}/profile/${userId}/report`;
+    
+        const influencer_Data: any = await axios.get(url, {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${modash_api_key}`
+            }
+        })
+    
+        return influencer_Data.data;
+    } catch (error) {
+        throw new DatabaseError(`Can't Add User: ${error}`)
+    }
+}
+
