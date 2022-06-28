@@ -1,6 +1,6 @@
 import { InfluencerHelper } from "../helpers/InfluencerHelper";
 
-import { Influencer } from "../helpers";
+import { Influencer } from "../helpers/types";
 
 export const InfluencerService = () => {
 

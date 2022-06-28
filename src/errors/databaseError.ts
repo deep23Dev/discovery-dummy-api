@@ -1,10 +1,10 @@
-export {};
+export { };
 
 const BaseError = require("./baseError");
 
 class DatabaseError extends BaseError {
-  constructor(message: string) {
-    super(500, message);
+  constructor(status: number = 500, message: string) {
+    super(status, message);
   }
 }
 

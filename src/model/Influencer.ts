@@ -1,49 +1,29 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId
 
 const InfluencerSchema = new Schema({
-    fullName: {
-        type: String,
-        required: true
+    createdBy: {
+        type: ObjectId,
+        ref: "user",
+        require: true,
     },
-    username: {
-        type: String,
-        required: true,
+    workspace_id: {
+        type: ObjectId,
+        ref: "worksapce",
+        require: true,
     },
-    socialLink: {
-        type: String,
-        required: true,
+    global_Influencer_Index_Id: {
+        type: ObjectId,
+        ref: "GlobalInfluencerIndex",
+        require: true,
     },
-    picture: {
-        type: String,
-        required: true,
-    },
-    followers: {
-        type: Number,
-    },
-    engagements: {
-        type: Number,
-    },
-    engagementRate: {
-        type: mongoose.Decimal128,
-    },
-    city: {
-        type: String,
-    },
-    country: {
-        type: String,
-    },
-    language: [
-        {
-            code: String,
-            name: String,
-        }
-    ],
-    postCount: {
-        type: Number
+    isFullReport: {
+        type: Boolean,
+        default: false
     }
 })
 
-const Influencer = mongoose.model('Influencer',InfluencerSchema);
+const Influencer = mongoose.model('InfluencerData',InfluencerSchema);
 
-module.exports = Influencer;
+export default Influencer;

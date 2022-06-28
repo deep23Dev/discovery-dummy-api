@@ -1,6 +1,6 @@
-import { Influencer } from ".";
+import { Influencer } from "./types";
 
-const Influencers = require('../model/Influencer');
+import DummyInfluencers from "../model/DummyInfluencer";
 const DatabaseError = require('../errors/databaseError');
 
 export const InfluencerHelper = () =>{
@@ -9,7 +9,7 @@ export const InfluencerHelper = () =>{
 
 InfluencerHelper.addInfluencer = async (data: Influencer) =>{
     try {
-        const influencer: Influencer = await Influencers.create(data);
+        const influencer: Influencer = await DummyInfluencers.create(data);
         return influencer;
     } catch (error) {
         throw new DatabaseError(`Can't Add User: ${error}`)
@@ -18,7 +18,7 @@ InfluencerHelper.addInfluencer = async (data: Influencer) =>{
 
 InfluencerHelper.getInfluencers =async () => {
     try {
-        const influencers : Influencer[] = await Influencers.find();
+        const influencers : Influencer[] = await DummyInfluencers.find();
         return influencers;
     } catch (error) {
         throw new DatabaseError(`Can't Get Influencer Data : ${error}`)

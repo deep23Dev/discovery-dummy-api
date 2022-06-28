@@ -18,4 +18,3 @@ export type Influencer = {
     ];
     postCount: string,
 }
-

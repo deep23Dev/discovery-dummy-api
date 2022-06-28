@@ -10,9 +10,9 @@ export const ModashApiHelper = () => {
 const modash_api = config.get("modash_api") as string;
 const modash_api_key = config.get("modash_api_key") as string;
 
-ModashApiHelper.getDataOfParameter = async (category: string, parameter: string) => {
+ModashApiHelper.getDataOfParameter = async (category: string, parameter: string, parameterQuery:string) => {
     try {
-        const url = `${modash_api}/${category}/${parameter}`;
+        const url = `${modash_api}/${category}/${parameter}?limit=10&query=${parameterQuery}`;
 
         const parameter_data: any = await axios.get(url, {
             headers: {

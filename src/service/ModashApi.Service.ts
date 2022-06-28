@@ -3,8 +3,8 @@ import { ModashApiHelper } from "../helpers/ModashApiHelper"
 export const ModashApiService = () => {
 }
 
-ModashApiService.getDataOfParameter = async (category: string, parameter: string) => {
-    const parameters: any = await ModashApiHelper.getDataOfParameter(category, parameter);
+ModashApiService.getDataOfParameter = async (category: string, parameter: string, parameterQuery: string) => {
+    const parameters: any = await ModashApiHelper.getDataOfParameter(category, parameter, parameterQuery);
     return parameters;
 }
 

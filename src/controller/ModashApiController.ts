@@ -8,7 +8,7 @@ export const ModashApiController = () => {
 ModashApiController.getDataOfParameter = async (req: Request, res: Response) => {
     try {
         let query: any = req.query;
-        const parameters: any = await ModashApiService.getDataOfParameter(query.category, query.parameter);
+        const parameters: any = await ModashApiService.getDataOfParameter(query.category, query.parameter, query.parameterQuery);
         return res.status(200).send({ sucess: true, parameters });
     } catch (error) {
         return res.status(500).send(error);
